@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/mystyle2.css" />
+</head>
+<body>
+	<div class="main">
+		<div th:each="photo, status : *{list}" class="photo-contener">
+			<img th:src="@{/images/{id}(id=${photo.name})}" class="photo">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Photo name</th>
+						<th>Photo resolution</th>
+						<th>Photo size</th>
+						<th>Photo created</th>
+				</thead>
+				<tbody>
+					</tr>
+					<tr>
+						<td th:text="${photo.name}">Photo name</td>
+						<td th:text="${photo.resolution}">Photo resolution</td>
+						<td th:text="${photo.size}">Photo size</td>
+						<td th:text="${photo.created}">Photo created</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

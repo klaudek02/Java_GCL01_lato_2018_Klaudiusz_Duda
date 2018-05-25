@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="/mystyle2.css" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="main">
+		<div class="login" th:switch="${logged}">
+			<div th:case="false">
+				<form action="/gallery/panel/login" method="post">
+					<label for="login"><b>Login</b></label></br>
+					<input type="text" name="login" placeholder="Enter Login" required /></br>
+					<label for="password"><b>Password</b></label></br>
+					<input type="password" name="password" placeholder="Enter Password" /></br>
+					</br> <input type="submit" value="Login" />
+				</form>
+			</div>
+			<div th:case="true">
+				<p>
+					<b>Welcome administrator</b>
+				</p>
+				<form method="POST" action="/gallery/panel/upload"
+					enctype="multipart/form-data">
+					<input type="file" name="file" /> <input type="submit"
+						value="Add photo" />
+				</form>
+				</br> </br>
+				<form action="/gallery/panel/logout" method="post">
+					<input type="submit" value="Logout" />
+				</form>
+			</div>
+		</div>
+		<div class="photo-contener" th:each="photo, status : *{list}">
+			<img class="photo" th:src="@{/images/{id}(id=${photo.name})}">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Photo name</th>
+						<th>Photo resolution</th>
+						<th>Photo size</th>
+						<th>Photo created</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td th:text="${photo.name}">Photo name</td>
+						<td th:text="${photo.resolution}">Photo resolution</td>
+						<td th:text="${photo.size}">Photo size</td>
+						<td th:text="${photo.created}">Photo created</td>
+					</tr>
+				</tbody>
+			</table>
+			<form th:action="@{/gallery/delete/{id}(id=${photo.index})}">
+				<input type="submit"
+					th:disabled="${(logged == false ) ? 'true' : 'false'}"
+					value="Delete" />
+			</form>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+.main {
+	width: 700px;
+	margin: 0 auto;
+}
+.login {
+	display: table;
+	padding-left: 20px;
+	margin: 0 auto;
+	height: 150px;
+	width: 100%;
+	background: #e6f2ff;
+	border: 1px solid black;
+}
+.photo {
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 250px;
+	width: 330px;
+	display: block;
+}
+.photo-contener {
+	border: 1px solid black;
+}
