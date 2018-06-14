@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="button_new_note">New note</string>
+    <string name="button_show_all">Show notes</string>
+    <string name="button_save_note">Save note</string>
+    <string name="button_add_photo">Add photo</string>
+    <string name="label_subject">Subject:</string>
+    <string name="label_description">Description</string>
+    <string name="button_add">New task</string>
+    <string name="button_clear">Clear completed</string>
+    <string name="edittext_hint_new_task">Type here your new task...</string>
+    <string name="button_save">Save task</string>
+    <string name="button_cancel">Cancel</string>
+</resources>
