@@ -1,0 +1,8 @@
+<form method="POST" action="/league/update2">
+	Name:<input type="text" name="name" required><br> 
+	<select name="value">
+	<option th:each="type : ${country}" th:value="${type.id}" th:text="${type.name}">Wireframe</option>
+	</select>
+	<input type="hidden" name="id" th:value="${id}"> 
+	 <input	type="submit" value="Update">
+</form>

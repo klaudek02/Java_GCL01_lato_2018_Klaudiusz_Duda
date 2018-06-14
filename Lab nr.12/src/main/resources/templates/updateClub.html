@@ -1,0 +1,9 @@
+<form method="POST" action="/club/update2">
+	Name:<input type="text" name="name" required><br>
+	Finance:<input type="number" name="finance" required><br>
+	Sponsor:<input type="text" name="sponsor" required><br>
+	League:<select name="leaguee">
+	<option th:each="type : ${league}" th:value="${type.id}" th:text="${type.name}">Wireframe</option>
+	</select><br><input type="hidden" name="id" th:value="${id}"> 
+	<input	type="submit" value="Add">
+</form>

@@ -1,0 +1,7 @@
+<form method="POST" action="/country/update2">
+	Name:<input type="text" name="name" required><br> 
+	Description:<input type="text" name="description" required><br>
+	Population:<input type="number" name="population" required><br>
+	<input type="hidden" name="id" th:value="${id}">
+	<input type="submit" value="Update">
+</form>

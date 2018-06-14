@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+<head>
+<meta charset="UTF-8">
+<title>Main Panel</title>
+</head>
+<body>
+	<h1>Main Panel</h1>
+	<div>
+		<p align="center">Country</p>
+		<table class="table">
+			<tr>
+				<td>ShowALL</td>
+				<td>Add</td>
+				<td>Update</td>
+				<td>Delete</td>
+			</tr>
+			<tr>
+				<td>
+					<form action="/country/all" method="POST">
+						<button type="submit">Submit</button>
+					</form>
+				</td>
+				<td>
+					<form action="/country/add" method="POST">
+						<button type="submit">Submit</button>
+					</form>
+				</td>
+				<td>
+					<form action="/country/update" method="POST">
+					<select name="value">
+					<option th:each="type : ${country}" th:value="${type.id}" th:text="${type.name}">Wireframe</option>
+					</select>
+					<button type="submit">Submit</button>
+					</form>
+				</td>
+				<td>
+					<form action="/country/delete" method="POST">
+					<select name="value">
+					<option th:each="type : ${country}" th:value="${type.id}" th:text="${type.name}">Wireframe</option>
+					</select>
+						<button type="submit" value="Delete">Submit</button>
+					</form>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<p align="center">Leagues</p>
+		<table class="table">
+			<tr>
+				<td>ShowALL</td>
+				<td>Add</td>
+				<td>Update</td>
+				<td>Delete</td>
+			</tr>
+			<tr>
+				<td>
+					<form action="/league/all" method="POST">
+						<button type="submit">Submit</button>
+					</form>
+				</td>
+				<td>
+					<form action="/league/add" method="POST">
+						<button type="submit">Submit</button>
+					</form>
+				</td>
+				<td>
+					<form action="/league/update" method="POST">
+					<select name="value">
+					<option th:each="type : ${league}" th:value="${type.id}" th:text="${type.name}">Wireframe</option>
+					</select>
+					<button type="submit">Submit</button>
+					</form>
+				</td>
+				<td>
+					<form action="/league/delete" method="POST">
+					<select name="value">
+					<option th:each="type : ${league}" th:value="${type.id}" th:text="${type.name}">Wireframe</option>
+					</select>
+						<button type="submit">Submit</button>
+					</form>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<p align="center">Club</p>
+		<table class="table">
+			<tr>
+				<td>ShowALL</td>
+				<td>Add</td>
+				<td>Update</td>
+				<td>Delete</td>
+			</tr>
+			<tr>
+				<td>
+					<form action="/club/all" method="POST">
+						<button type="submit">Submit</button>
+					</form>
+				</td>
+				<td>
+					<form action="/club/add" method="POST">
+						<button type="submit">Submit</button>
+					</form>
+				</td>
+				<td>
+					<form action="/club/update" method="POST">
+					<select name="value">
+					<option th:each="type : ${club}" th:value="${type.id}" th:text="${type.name}">Wireframe</option>
+					</select>
+					<button type="submit">Submit</button>
+					</form>
+				</td>
+				<td>
+					<form action="/club/delete" method="POST">
+					<select name="value">
+					<option th:each="type : ${club}" th:value="${type.id}" th:text="${type.name}">Wireframe</option>
+					</select>
+						<button type="submit">Submit</button>
+					</form>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<p align="center">Footballer</p>
+		<table class="table">
+			<tr>
+				<td>ShowALL</td>
+				<td>Add</td>
+				<td>Update</td>
+				<td>Delete</td>
+			</tr>
+			<tr>
+				<td>
+					<form action="/footballer/all" method="POST">
+						<button type="submit">Submit</button>
+					</form>
+				</td>
+				<td>
+					<form action="/footballer/add" method="POST">
+						<button type="submit">Submit</button>
+					</form>
+				</td>
+				<td>
+					<form action="/footballer/update" method="POST">
+					<select name="value">
+					<option th:each="type : ${footballer}" th:value="${type.id}" th:text="${type.firstName} + ${type.lastName} ">Wireframe</option>
+					</select>
+					<button type="submit">Submit</button>
+					</form>
+				</td>
+				<td>
+					<form action="/footballer/delete" method="POST">
+					<select name="value">
+					<option th:each="type : ${footballer}" th:value="${type.id}" th:text="${type.firstName} + ${type.lastName} ">Wireframe</option>
+					</select>
+					
+						<button type="submit">Submit</button>
+					</form>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<p align="center">Manager</p>
+		<table class="table">
+			<tr>
+				<td>ShowALL</td>
+				<td>Add</td>
+				<td>Update</td>
+				<td>Delete</td>
+			</tr>
+			<tr>
+				<td>
+					<form action="/manager/all" method="POST">
+						<button type="submit">Submit</button>
+					</form>
+				</td>
+				<td>
+					<form action="/manager/add" method="POST">
+						<button type="submit">Submit</button>
+					</form>
+				</td>
+				<td>
+					<form action="/manager/update" method="POST">
+					<select name="value">
+					<option th:each="type : ${manager}" th:value="${type.id}" th:text="${type.firstName} + ${type.lastName} ">Wireframe</option>
+					</select>
+					<button type="submit">Submit</button>
+					</form>
+				</td>
+				<td>
+					<form action="/manager/delete" method="POST">
+					<select name="value">
+					<option th:each="type : ${manager}" th:value="${type.id}" th:text="${type.firstName} + ${type.lastName} ">Wireframe</option>
+					</select>
+						<button type="submit">Submit</button>
+					</form>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

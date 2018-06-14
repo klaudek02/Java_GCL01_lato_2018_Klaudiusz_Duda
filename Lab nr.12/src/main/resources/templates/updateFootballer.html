@@ -1,0 +1,13 @@
+<form method="POST" action="/footballer/update2">
+	First Name:<input type="text" name="firstName" required><br>
+	Last Name:<input type="text" name="lastName" required><br>
+	Age :<input type="number" name="age" required><br>
+	Position: <input type="text" name="position" required><br>
+	Country:<select name="countryy">
+	<option th:each="type : ${country}" th:value="${type.id}" th:text="${type.name}">Wireframe</option>
+	</select><br>
+	Club:<select name="clubb">
+	<option th:each="type : ${club}" th:value="${type.id}" th:text="${type.name}">Wireframe</option>
+	</select><br><input type="hidden" name="id" th:value="${id}"> 
+	<input	type="submit" value="Add">
+</form>
